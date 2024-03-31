@@ -1,0 +1,50 @@
+@import "vue-multiselect/dist/vue-multiselect.css";
+
+.multiselect {
+  width: 100%;
+  border-radius: calc($radius);
+  border: 1px solid $border-color;
+  background: transparent;
+
+  &__input {
+    width: 100% !important;
+    height: initial;
+    min-height: initial!important;
+    padding: 0 1rem 0 0 !important;
+    border: none !important;
+  }
+
+
+  &__option {
+
+    &--selected {
+    }
+
+    &--highlight {
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+
+  &__placeholder {
+    line-height: 0;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  &__tags {
+    background: transparent;
+    border: none;
+    min-height: 56px;
+  }
+
+  &__single {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 0.8rem;
+  }
+
+  &__select {
+    padding-top: 1.7rem;
+  }
+}

@@ -1,0 +1,199 @@
+$height: 3.5rem;
+
+.input {
+  position: relative;
+  margin-top: 1rem;
+
+  .label {
+    color: $black-500;
+    margin-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    transition: 0.3s ease-out;
+    pointer-events: none !important;
+  }
+
+  @include placeholder {
+    color: $black-300;
+    font-weight: 300 !important;
+  }
+
+  input, textarea {
+    width: calc(100% - 2rem);
+    outline: none;
+    padding: 0 1rem;
+    min-height: $height;
+    border-radius: calc($radius);
+    transition: 0.2s;
+    border: 1px solid transparent;
+    background: $black-900;
+    line-height: 0;
+    font-size: 1rem;
+
+
+    &[disabled] {
+      background: rgba($black-500, 0.1);
+
+      &::-webkit-input-placeholder {
+        color: rgba($black-500, 0.7);
+      }
+    }
+  }
+
+  textarea {
+    padding: 1rem;
+    min-height: 120px;
+    height: auto;
+    resize: none;
+    line-height: normal;
+  }
+
+  &-left {
+    direction: ltr;
+  }
+
+  &-center {
+    input, textarea {
+      text-align: center;
+    }
+  }
+
+  &-right {
+    direction: rtl;
+  }
+
+  &-outline {
+    input, textarea {
+      background: transparent;
+      border: 1px solid $border-color;
+
+      &::placeholder {
+        font-weight: 300 !important;
+        color: $black-300;
+      }
+
+    }
+  }
+
+  &-round {
+    input, textarea {
+      border-radius: 2rem;
+    }
+  }
+
+  &-icon {
+    input, textarea {
+      padding: 0 3rem;
+      font-size: 1rem;
+    }
+  }
+
+  .vpd-icon-btn {
+    border-top-right-radius: calc($radius);
+    border-bottom-right-radius: calc($radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+  }
+
+  &__message {
+    padding: 0.25rem 1rem;
+    font-size: 0.8em;
+
+    &.error {
+      color: red;
+    }
+  }
+
+  &__error {
+    input, textarea, .label {
+      border-color: red !important;
+      color: red !important;
+    }
+  }
+}
+
+.input__ltr {
+  input, textarea {
+    direction: ltr;
+  }
+}
+
+.topForLabel {
+  .icon {
+    top: 2.7rem;
+  }
+}
+
+.icon {
+  top: 1rem;
+  position: absolute;
+  color: $black-300;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  &.imgIcon {
+    top: 1rem;
+  }
+}
+
+.icon-pre .icon {
+  right: 1.3rem
+}
+
+.icon-post .icon {
+  left: 1.3rem;
+}
+
+.form {
+  .input {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@for $i from 1 through 4 {
+  .r#{$i} input,
+  .r#{$i} textarea {
+    padding-right: $i * 1rem;
+  }
+
+  .l#{$i} input,
+  .l#{$i} textarea {
+    padding-left: $i * 1rem;
+  }
+}
+
+.multiselect__select {
+  background: transparent !important;
+}
+
+.floating {
+
+  .label {
+    position: absolute;
+    padding: 0 1rem;
+  }
+
+  &-focus {
+    top: -0.8rem;
+    background: #fcfcfc;
+    padding: 0 0.5rem;
+    color: $primary-color !important;
+  }
+
+  &-blur {
+    right: 0.5rem;
+    top: 1.2rem;
+    color: $black-300 !important;
+    font-weight: 300 !important;
+  }
+
+  &.focus {
+    input, textarea {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+}
