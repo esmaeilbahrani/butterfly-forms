@@ -87,3 +87,7 @@ Contributions to Butterfly Forms are welcome! If you have any suggestions, bug f
 ### License
 This project is licensed under the MIT License, which allows for free usage, modification, and distribution.
  
+#### About Me
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/esmaeilbahranifard/) | Follow me on [GitHub](https://github.com/esmaeilbahrani/)
+
